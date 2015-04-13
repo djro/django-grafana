@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.conf import settings
 from jsonfield import JSONField
 
 
@@ -26,7 +27,7 @@ class Dashboard(ChangedModelMixin, models.Model):
     slug = models.SlugField()
     version = models.IntegerField()
     data = JSONField()
-    organization = models.ForeignKey('Organization')
+    organization = models.ForeignKey("Organization")
     # Grafana stores all data related to a dashboard (panels, tags etc.)
     # in JSON. Maybe I'll try to change this in something more rational.
 
@@ -41,6 +42,11 @@ class Dashboard(ChangedModelMixin, models.Model):
 class Organization(ChangedModelMixin, models.Model):
     name = models.CharField(max_length=256)
     version = models.IntegerField()
+    users = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        through="UserInOrganization",
+        through_fields=("organization", "user")
+        )
 
     class Meta:
         verbose_name = "Organization"
@@ -48,3 +54,13 @@ class Organization(ChangedModelMixin, models.Model):
 
     def __str__(self):
         return self.name
+
+
+class UserInOrganization(ChangedModelMixin, models.Model):
+    organization = models.ForeignKey("Organization")
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    role = models.ForeignKey("UserRole")
+
+    class Meta:
+        verbose_name = "UserInOrganization"
+        verbose_name_plural = "UsersInOrganizations"
