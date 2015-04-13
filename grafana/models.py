@@ -1,4 +1,6 @@
 from __future__ import unicode_literals
+from django.db import models
+from jsonfield import JSONField
 
 
 class CreatedModelMixin(object):
@@ -17,3 +19,20 @@ class UpdatedModelMixin(object):
 
 class ChangedModelMixin(CreatedModelMixin, UpdatedModelMixin):
     pass
+
+
+class Dashboard(ChangedModelMixin, models.Model):
+    title = models.CharField(max_length=512)
+    slug = models.SlugField()
+    version = models.IntegerField()
+    data = JSONField()
+    organization = models.ForeignKey('Organization')
+    # Grafana stores all data related to a dashboard (panels, tags etc.)
+    # in JSON. Maybe I'll try to change this in something more rational.
+
+    class Meta:
+        verbose_name = "Dashboard"
+        verbose_name_plural = "Dashboards"
+
+    def __str__(self):
+        return self.slug
