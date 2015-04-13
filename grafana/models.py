@@ -22,7 +22,7 @@ class ChangedModelMixin(CreatedModelMixin, UpdatedModelMixin):
 
 
 class Dashboard(ChangedModelMixin, models.Model):
-    title = models.CharField(max_length=512)
+    title = models.CharField(max_length=256)
     slug = models.SlugField()
     version = models.IntegerField()
     data = JSONField()
