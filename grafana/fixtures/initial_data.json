@@ -1,0 +1,23 @@
+[
+    {
+        "model": "grafana.userrole",
+        "pk": 1,
+        "fields": {
+            "name": "Viewer"
+        }
+    },
+    {
+        "model": "grafana.userrole",
+        "pk": 2,
+        "fields": {
+            "name": "Editor"
+        }
+    },
+    {
+        "model": "grafana.userrole",
+        "pk": 3,
+        "fiels": {
+            "name": "Admin"
+        }
+    }
+]
