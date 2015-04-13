@@ -68,7 +68,7 @@ class UserInOrganization(ChangedModelMixin, models.Model):
 
 class UserRole(models.Model):
     name = models.CharField(max_length=64)
-    info = models.CharField(max_length=256)
+    info = models.CharField(max_length=256, null=True)
 
     class Meta:
         verbose_name = "UserRole"
