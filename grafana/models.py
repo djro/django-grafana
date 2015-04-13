@@ -64,3 +64,15 @@ class UserInOrganization(ChangedModelMixin, models.Model):
     class Meta:
         verbose_name = "UserInOrganization"
         verbose_name_plural = "UsersInOrganizations"
+
+
+class UserRole(models.Model):
+    name = models.CharField(max_length=64)
+    info = models.CharField(max_length=256)
+
+    class Meta:
+        verbose_name = "UserRole"
+        verbose_name_plural = "UserRoles"
+
+    def __str__(self):
+        return self.name
