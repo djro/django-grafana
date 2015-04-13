@@ -36,3 +36,15 @@ class Dashboard(ChangedModelMixin, models.Model):
 
     def __str__(self):
         return self.slug
+
+
+class Organization(ChangedModelMixin, models.Model):
+    name = models.CharField(max_length=256)
+    version = models.IntegerField()
+
+    class Meta:
+        verbose_name = "Organization"
+        verbose_name_plural = "Organizations"
+
+    def __str__(self):
+        return self.name
