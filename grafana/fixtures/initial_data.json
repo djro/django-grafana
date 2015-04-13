@@ -3,21 +3,24 @@
         "model": "grafana.userrole",
         "pk": 1,
         "fields": {
-            "name": "Viewer"
+            "name": "Viewer",
+            "info": "Can just view dashboard"
         }
     },
     {
         "model": "grafana.userrole",
         "pk": 2,
         "fields": {
-            "name": "Editor"
+            "name": "Editor",
+            "info": "Can edit some of dashboard properties"
         }
     },
     {
         "model": "grafana.userrole",
         "pk": 3,
-        "fiels": {
-            "name": "Admin"
+        "fields": {
+            "name": "Admin",
+            "info": "Has full control over dashboard"
         }
     }
 ]
