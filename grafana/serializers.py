@@ -22,9 +22,6 @@ class ConfigurableFieldsMixin(object):
 class DashboardMetaSerializer(
         ConfigurableFieldsMixin,
         rest_serializers.Serializer):
-    def __init__(self, *args, **kwargs):
-        super(DashboardMetaSerializer, self).__init__(*args, **kwargs)
-
     isStarred = rest_serializers.BooleanField(default=False)
     isHome = rest_serializers.BooleanField(default=False)
     isSnapshot = rest_serializers.BooleanField(default=False)
@@ -35,3 +32,12 @@ class DashboardMetaSerializer(
     created = rest_serializers.DateTimeField(
         format='iso-8601',
         default=datetime.datetime.min)
+
+
+class DashboardDataSerializer(rest_serializers.DictField):
+    pass
+
+
+class DashboardSerializer(rest_serializers.Serializer):
+    model = DashboardDataSerializer()
+    meta = DashboardMetaSerializer()
