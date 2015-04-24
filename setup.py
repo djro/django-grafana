@@ -27,5 +27,6 @@ setup(
     install_requires=[
         "Django>=1.7",
         "djangorestframework>=3.0",
+        "jsonfield>=1.0"
     ]
     )

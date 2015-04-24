@@ -1,0 +1,600 @@
+[
+    {
+        "fields": {
+            "info": "Can just view dashboard",
+            "name": "Viewer"
+        },
+        "model": "grafana.userrole",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "info": "Can edit some of dashboard properties",
+            "name": "Editor"
+        },
+        "model": "grafana.userrole",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "info": "Has full control over dashboard",
+            "name": "Admin"
+        },
+        "model": "grafana.userrole",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "data": {
+                "editable": true,
+                "nav": [
+                    {
+                        "collapse": false,
+                        "enable": true,
+                        "now": true,
+                        "refresh_intervals": [
+                            "5s",
+                            "10s",
+                            "30s",
+                            "1m",
+                            "5m",
+                            "15m",
+                            "30m",
+                            "1h",
+                            "2h",
+                            "1d"
+                        ],
+                        "status": "Stable",
+                        "time_options": [
+                            "5m",
+                            "15m",
+                            "1h",
+                            "6h",
+                            "12h",
+                            "24h",
+                            "2d",
+                            "7d",
+                            "30d"
+                        ],
+                        "type": "timepicker"
+                    }
+                ],
+                "rows": [
+                    {
+                        "collapse": false,
+                        "editable": true,
+                        "height": "150px",
+                        "panels": [
+                            {
+                                "content": "<div class=\"text-center\" style=\"padding-top: 15px\">\n<img src=\"img/logo_transparent_200x.png\"> \n</div>",
+                                "editable": true,
+                                "id": 1,
+                                "mode": "html",
+                                "span": 12,
+                                "style": {},
+                                "title": "Welcome to",
+                                "type": "text"
+                            }
+                        ],
+                        "title": "New row"
+                    },
+                    {
+                        "collapse": false,
+                        "editable": true,
+                        "height": "210px",
+                        "panels": [
+                            {
+                                "content": "<br/>\n\n<div class=\"row-fluid\">\n  <div class=\"span6\">\n    <ul>\n      <li>\n        <a href=\"http://grafana.org/docs#configuration\" target=\"_blank\">Configuration</a>\n      </li>\n      <li>\n        <a href=\"http://grafana.org/docs/troubleshooting\" target=\"_blank\">Troubleshooting</a>\n      </li>\n      <li>\n        <a href=\"http://grafana.org/docs/support\" target=\"_blank\">Support</a>\n      </li>\n      <li>\n        <a href=\"http://grafana.org/docs/features/intro\" target=\"_blank\">Getting started</a>  (Must read!)\n      </li>\n    </ul>\n  </div>\n  <div class=\"span6\">\n    <ul>\n      <li>\n        <a href=\"http://grafana.org/docs/features/graphing\" target=\"_blank\">Graphing</a>\n      </li>\n      <li>\n        <a href=\"http://grafana.org/docs/features/annotations\" target=\"_blank\">Annotations</a>\n      </li>\n      <li>\n        <a href=\"http://grafana.org/docs/features/graphite\" target=\"_blank\">Graphite</a>\n      </li>\n      <li>\n        <a href=\"http://grafana.org/docs/features/influxdb\" target=\"_blank\">InfluxDB</a>\n      </li>\n      <li>\n        <a href=\"http://grafana.org/docs/features/opentsdb\" target=\"_blank\">OpenTSDB</a>\n      </li>\n    </ul>\n  </div>\n</div>",
+                                "id": 2,
+                                "mode": "html",
+                                "span": 6,
+                                "style": {},
+                                "title": "Documentation Links",
+                                "type": "text"
+                            },
+                            {
+                                "content": "<br/>\n\n<div class=\"row-fluid\">\n  <div class=\"span12\">\n    <ul>\n      <li>Ctrl+S saves the current dashboard</li>\n      <li>Ctrl+F Opens the dashboard finder</li>\n      <li>Ctrl+H Hide/show row controls</li>\n      <li>Click and drag graph title to move panel</li>\n      <li>Hit Escape to exit graph when in fullscreen or edit mode</li>\n      <li>Click the colored icon in the legend to change series color</li>\n      <li>Ctrl or Shift + Click legend name to hide other series</li>\n    </ul>\n  </div>\n</div>\n",
+                                "id": 3,
+                                "mode": "html",
+                                "span": 6,
+                                "style": {},
+                                "title": "Tips & Shortcuts",
+                                "type": "text"
+                            }
+                        ],
+                        "title": "Welcome to Grafana"
+                    },
+                    {
+                        "collapse": false,
+                        "editable": true,
+                        "height": "250px",
+                        "panels": [
+                            {
+                                "aliasColors": {},
+                                "aliasYAxis": {},
+                                "annotate": {
+                                    "enable": false
+                                },
+                                "bars": false,
+                                "datasource": "graphite",
+                                "fill": 1,
+                                "grid": {
+                                    "leftMax": null,
+                                    "leftMin": null,
+                                    "max": null,
+                                    "min": null,
+                                    "rightMax": null,
+                                    "rightMin": null,
+                                    "threshold1": null,
+                                    "threshold1Color": "rgba(216, 200, 27, 0.27)",
+                                    "threshold2": null,
+                                    "threshold2Color": "rgba(234, 112, 112, 0.22)"
+                                },
+                                "id": 4,
+                                "interactive": true,
+                                "legend": {
+                                    "avg": false,
+                                    "current": false,
+                                    "max": false,
+                                    "min": false,
+                                    "show": true,
+                                    "total": false,
+                                    "values": false
+                                },
+                                "legend_counts": true,
+                                "lines": true,
+                                "linewidth": 2,
+                                "nullPointMode": "connected",
+                                "options": false,
+                                "percentage": false,
+                                "pointradius": 5,
+                                "points": false,
+                                "renderer": "flot",
+                                "resolution": 100,
+                                "scale": 1,
+                                "span": 12,
+                                "spyable": true,
+                                "stack": true,
+                                "steppedLine": false,
+                                "targets": [
+                                    {
+                                        "column": "value",
+                                        "function": "mean",
+                                        "target": "randomWalk('random walk')"
+                                    }
+                                ],
+                                "timezone": "browser",
+                                "title": "First Graph (click title to edit)",
+                                "tooltip": {
+                                    "query_as_alias": true,
+                                    "value_type": "cumulative"
+                                },
+                                "type": "graph",
+                                "x-axis": true,
+                                "y-axis": true,
+                                "y_formats": [
+                                    "short",
+                                    "short"
+                                ]
+                            }
+                        ],
+                        "title": "test"
+                    }
+                ],
+                "style": "dark",
+                "tags": [],
+                "templating": {
+                    "list": []
+                },
+                "time": {
+                    "from": "now-6h",
+                    "to": "now"
+                },
+                "timezone": "browser",
+                "title": "Grafana",
+                "version": 5
+            },
+            "name": "default"
+        },
+        "model": "grafana.dashboarddefaulttemplate",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "data": {
+                "editable": true,
+                "nav": [
+                    {
+                        "enable": true,
+                        "now": true,
+                        "refresh_intervals": [
+                            "5s",
+                            "10s",
+                            "30s",
+                            "1m",
+                            "5m",
+                            "15m",
+                            "30m",
+                            "1h",
+                            "2h",
+                            "1d"
+                        ],
+                        "status": "Stable",
+                        "time_options": [
+                            "5m",
+                            "15m",
+                            "1h",
+                            "6h",
+                            "12h",
+                            "24h",
+                            "2d",
+                            "7d",
+                            "30d"
+                        ],
+                        "type": "timepicker"
+                    }
+                ],
+                "refresh": false,
+                "rows": [
+                    {
+                        "collapse": false,
+                        "editable": true,
+                        "height": "250px",
+                        "panels": [],
+                        "title": "Row1"
+                    }
+                ],
+                "style": "dark",
+                "templating": {
+                    "list": []
+                },
+                "time": {
+                    "from": "now-6h",
+                    "to": "now"
+                },
+                "title": "New Dashboard"
+            },
+            "name": "empty"
+        },
+        "model": "grafana.dashboarddefaulttemplate",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "data": {
+                "editable": false,
+                "hideControls": true,
+                "nav": [
+                    {
+                        "enable": false,
+                        "type": "timepicker"
+                    }
+                ],
+                "rows": [
+                    {
+                        "collapse": false,
+                        "editable": true,
+                        "height": "100px",
+                        "panels": [
+                            {
+                                "content": "<div class=\"text-center\" style=\"padding: 10px 0 20px 0\">\n<img src=\"img/logo_transparent_200x.png\" width=\"170px\"> \n</div>",
+                                "editable": true,
+                                "id": 1,
+                                "mode": "html",
+                                "span": 12,
+                                "style": {},
+                                "title": "",
+                                "type": "text"
+                            }
+                        ],
+                        "title": "New row"
+                    },
+                    {
+                        "height": "610px",
+                        "panels": [
+                            {
+                                "id": 2,
+                                "mode": "starred",
+                                "span": 6,
+                                "title": "Starred dashboards",
+                                "type": "dashlist"
+                            },
+                            {
+                                "id": 3,
+                                "mode": "search",
+                                "span": 6,
+                                "title": "Dashboards",
+                                "type": "dashlist"
+                            }
+                        ]
+                    }
+                ],
+                "style": "dark",
+                "tags": [],
+                "templating": {
+                    "list": []
+                },
+                "time": {
+                    "from": "now-6h",
+                    "to": "now"
+                },
+                "timezone": "browser",
+                "title": "Home",
+                "version": 5
+            },
+            "name": "home"
+        },
+        "model": "grafana.dashboarddefaulttemplate",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "data": {
+                "annotations": {
+                    "enable": false
+                },
+                "editable": true,
+                "hideControls": false,
+                "id": null,
+                "nav": [
+                    {
+                        "collapse": false,
+                        "enable": true,
+                        "notice": false,
+                        "now": true,
+                        "refresh_intervals": [
+                            "5s",
+                            "10s",
+                            "30s",
+                            "1m",
+                            "5m",
+                            "15m",
+                            "30m",
+                            "1h",
+                            "2h",
+                            "1d"
+                        ],
+                        "status": "Stable",
+                        "time_options": [
+                            "5m",
+                            "15m",
+                            "1h",
+                            "6h",
+                            "12h",
+                            "24h",
+                            "2d",
+                            "7d",
+                            "30d"
+                        ],
+                        "type": "timepicker"
+                    }
+                ],
+                "originalTitle": "Templated Graphs Nested",
+                "refresh": false,
+                "rows": [
+                    {
+                        "collapsable": true,
+                        "collapse": false,
+                        "editable": true,
+                        "height": "350px",
+                        "notice": false,
+                        "panels": [
+                            {
+                                "aliasColors": {
+                                    "highres.test": "#1F78C1",
+                                    "mobile": "#6ED0E0",
+                                    "scale(highres.test,3)": "#6ED0E0",
+                                    "tablet": "#EAB839"
+                                },
+                                "annotate": {
+                                    "enable": false
+                                },
+                                "bars": false,
+                                "datasource": null,
+                                "editable": true,
+                                "fill": 1,
+                                "grid": {
+                                    "leftMax": null,
+                                    "leftMin": null,
+                                    "max": null,
+                                    "min": 0,
+                                    "rightMax": null,
+                                    "rightMin": null,
+                                    "threshold1": null,
+                                    "threshold1Color": "rgba(216, 200, 27, 0.27)",
+                                    "threshold2": null,
+                                    "threshold2Color": "rgba(234, 112, 112, 0.22)"
+                                },
+                                "id": 1,
+                                "legend": {
+                                    "avg": false,
+                                    "current": false,
+                                    "max": false,
+                                    "min": false,
+                                    "show": true,
+                                    "total": false,
+                                    "values": false
+                                },
+                                "lines": true,
+                                "linewidth": 1,
+                                "loadingEditor": false,
+                                "nullPointMode": "connected",
+                                "percentage": false,
+                                "pointradius": 5,
+                                "points": false,
+                                "renderer": "flot",
+                                "resolution": 100,
+                                "scale": 1,
+                                "seriesOverrides": [],
+                                "span": 12,
+                                "stack": true,
+                                "steppedLine": false,
+                                "targets": [
+                                    {
+                                        "column": "value",
+                                        "function": "mean",
+                                        "target": "aliasByNode(apps.$app.$server.counters.requests.count, 2)"
+                                    }
+                                ],
+                                "title": "Traffic [[period]]",
+                                "tooltip": {
+                                    "query_as_alias": true,
+                                    "value_type": "cumulative"
+                                },
+                                "type": "graph",
+                                "x-axis": true,
+                                "y-axis": true,
+                                "y_formats": [
+                                    "short",
+                                    "short"
+                                ]
+                            }
+                        ],
+                        "title": "Row1"
+                    },
+                    {
+                        "collapsable": true,
+                        "collapse": false,
+                        "editable": true,
+                        "height": "350px",
+                        "notice": false,
+                        "panels": [
+                            {
+                                "aliasColors": {
+                                    "highres.test": "#1F78C1",
+                                    "mobile": "#6ED0E0",
+                                    "scale(highres.test,3)": "#6ED0E0",
+                                    "tablet": "#EAB839"
+                                },
+                                "annotate": {
+                                    "enable": false
+                                },
+                                "bars": false,
+                                "datasource": null,
+                                "editable": true,
+                                "fill": 1,
+                                "grid": {
+                                    "leftMax": null,
+                                    "leftMin": null,
+                                    "max": null,
+                                    "min": 0,
+                                    "rightMax": null,
+                                    "rightMin": null,
+                                    "threshold1": null,
+                                    "threshold1Color": "rgba(216, 200, 27, 0.27)",
+                                    "threshold2": null,
+                                    "threshold2Color": "rgba(234, 112, 112, 0.22)"
+                                },
+                                "id": 2,
+                                "legend": {
+                                    "avg": false,
+                                    "current": false,
+                                    "max": false,
+                                    "min": false,
+                                    "show": true,
+                                    "total": false,
+                                    "values": false
+                                },
+                                "lines": true,
+                                "linewidth": 1,
+                                "loadingEditor": false,
+                                "nullPointMode": "connected",
+                                "percentage": false,
+                                "pointradius": 5,
+                                "points": false,
+                                "renderer": "flot",
+                                "resolution": 100,
+                                "scale": 1,
+                                "seriesOverrides": [],
+                                "span": 12,
+                                "stack": true,
+                                "steppedLine": false,
+                                "targets": [
+                                    {
+                                        "target": "aliasByNode(apps.$app.$server.counters.requests.count, 2)"
+                                    }
+                                ],
+                                "title": "Second pannel",
+                                "tooltip": {
+                                    "query_as_alias": true,
+                                    "value_type": "cumulative"
+                                },
+                                "type": "graph",
+                                "x-axis": true,
+                                "y-axis": true,
+                                "y_formats": [
+                                    "short",
+                                    "short"
+                                ],
+                                "zerofill": true
+                            }
+                        ],
+                        "title": "Row1"
+                    }
+                ],
+                "style": "dark",
+                "tags": [
+                    "showcase",
+                    "templated"
+                ],
+                "templating": {
+                    "enable": true,
+                    "list": [
+                        {
+                            "allFormat": "wildcard",
+                            "current": {
+                                "text": "All",
+                                "value": "*"
+                            },
+                            "datasource": null,
+                            "includeAll": true,
+                            "name": "app",
+                            "options": [],
+                            "query": "apps.*",
+                            "refresh": true,
+                            "type": "query"
+                        },
+                        {
+                            "allFormat": "Glob",
+                            "current": {
+                                "text": "All",
+                                "value": "*"
+                            },
+                            "datasource": null,
+                            "includeAll": true,
+                            "name": "server",
+                            "options": [],
+                            "query": "apps.$app.*",
+                            "refresh": false,
+                            "type": "query"
+                        },
+                        {
+                            "allFormat": "glob",
+                            "current": {
+                                "text": "counters",
+                                "value": "counters"
+                            },
+                            "datasource": null,
+                            "includeAll": true,
+                            "name": "metric",
+                            "options": [],
+                            "query": "apps.$app.$server.*",
+                            "refresh_on_load": false,
+                            "type": "query"
+                        }
+                    ]
+                },
+                "time": {
+                    "from": "now-15m",
+                    "to": "now"
+                },
+                "timezone": "browser",
+                "title": "Templated Graphs Nested",
+                "version": 6
+            },
+            "name": "template_vars"
+        },
+        "model": "grafana.dashboarddefaulttemplate",
+        "pk": 4
+    }
+]
