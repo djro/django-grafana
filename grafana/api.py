@@ -5,6 +5,10 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
 from .models import DashboardDefaultTemplate
 from .serializers import DashboardSerializer
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 @api_view(["GET"])
@@ -19,4 +23,8 @@ def dashboard_template(request, template_name):
     if serializer.is_valid():
         return Response(data=serializer.data)
     else:
+        logger.warning(
+            "Default template `%s` isn't valid. Errors - %s",
+            template_name,
+            serializer.errors)
         return Response(status=HTTP_400_BAD_REQUEST)
