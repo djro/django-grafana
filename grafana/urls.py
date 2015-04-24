@@ -4,7 +4,10 @@ import api as api_views
 
 dashboards_urls = patterns(
     '',
-    url(r'^home/$', api_views.home_dashboard, name='home_dashboard'))
+    url(
+        r'^(?P<template_name>\w+)/$',
+        api_views.dashboard_template,
+        name='dashboard_template'))
 
 
 urlpatterns = patterns(
