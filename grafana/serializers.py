@@ -25,7 +25,7 @@ class DashboardMetaSerializer(
     isStarred = rest_serializers.BooleanField(default=False)
     isHome = rest_serializers.BooleanField(default=False)
     isSnapshot = rest_serializers.BooleanField(default=False)
-    slug = rest_serializers.SlugField()
+    slug = rest_serializers.SlugField(allow_blank=True)
     expires = rest_serializers.DateTimeField(
         format='iso-8601',
         default=datetime.datetime.min)
