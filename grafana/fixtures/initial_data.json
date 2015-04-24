@@ -196,7 +196,7 @@
             },
             "name": "default"
         },
-        "model": "grafana.dashboardtemplate",
+        "model": "grafana.dashboarddefaulttemplate",
         "pk": 1
     },
     {
@@ -256,7 +256,7 @@
             },
             "name": "empty"
         },
-        "model": "grafana.dashboardtemplate",
+        "model": "grafana.dashboarddefaulttemplate",
         "pk": 2
     },
     {
@@ -324,7 +324,7 @@
             },
             "name": "home"
         },
-        "model": "grafana.dashboardtemplate",
+        "model": "grafana.dashboarddefaulttemplate",
         "pk": 3
     },
     {
@@ -594,7 +594,7 @@
             },
             "name": "template_vars"
         },
-        "model": "grafana.dashboardtemplate",
+        "model": "grafana.dashboarddefaulttemplate",
         "pk": 4
     }
 ]
