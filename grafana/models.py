@@ -22,6 +22,18 @@ class ChangedModelMixin(CreatedModelMixin, UpdatedModelMixin):
     pass
 
 
+class DashboardTemplates(models.Model):
+    name = models.CharField(db_index=True, unique=True)
+    data = JSONField()
+
+    class Meta:
+        verbose_name = "Dashboard template"
+        verbose_name_plural = "Dashboard templates"
+
+    def __str__(self):
+        return self.name
+
+
 class Dashboard(ChangedModelMixin, models.Model):
     title = models.CharField(max_length=256)
     slug = models.SlugField()
@@ -29,7 +41,7 @@ class Dashboard(ChangedModelMixin, models.Model):
     data = JSONField()
     organization = models.ForeignKey("Organization")
     # Grafana stores all data related to a dashboard (panels, tags etc.)
-    # in JSON. Maybe I'll try to change this in something more rational.
+    # in JSON format. Maybe I'll try to change this in something more rational.
 
     class Meta:
         verbose_name = "Dashboard"
