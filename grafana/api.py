@@ -23,7 +23,7 @@ def dashboard_template(request, template_name):
     if serializer.is_valid():
         return Response(data=serializer.data)
     else:
-        logging.warning(
+        logger.warning(
             "Default template `%s` isn't valid. Errors - %s",
             template_name,
             serializer.errors)
