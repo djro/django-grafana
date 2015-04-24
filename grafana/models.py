@@ -22,7 +22,7 @@ class ChangedModelMixin(CreatedModelMixin, UpdatedModelMixin):
     pass
 
 
-class DashboardTemplates(models.Model):
+class DashboardTemplate(models.Model):
     name = models.CharField(db_index=True, unique=True)
     data = JSONField()
 
